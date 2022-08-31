@@ -21,3 +21,4 @@ An example of more structured and targeted output of specific columns is also pr
 //**foreach ($analytics_xml->QueryResult->ResultXml->rowset->Row as $item ) {printf('<li>%s -- %s -- %s -- %s -- <span style="font-weight:bold">%s</span></li>', $item->Column1, $item->Column2, $item->Column4, $item->Column7, $item->Column6);}/*
 ?>
 ```
+This code can be extended in numerous ways.  Multiple filters can be passed, multiple prompts can be provided, and numerous subqueries can be staged based on input. For example, a barcode prompt can be used to look up an OCLC# which can then be trimmed from the first results and injected into a second query in the background.  These additional subqueries would just need to be created as reports in Oracle Analytics Server.
