@@ -9,4 +9,13 @@ https://developers.exlibrisgroup.com/blog/how-to-use-an-api-to-send-filters-and-
 
 Beginning with the two exercises above, we can extend things a bit further with some PHP code to allow users to provide a prompt like a barcode or an ISSN (as in our example "ia.php") and then inject that value into the filter and print the XML results in a slighly more attractive way.
 
+The code supplied here defaults to outputting the raw xml as shown here:
+<?php
+	print_r($analytics_xml);
+?>
 
+An example of more structured and targeted output of specific columns is also provided.  However, if you'd like to use that, you must comment out the above and uncomment the below.
+
+<?php
+//**foreach ($analytics_xml->QueryResult->ResultXml->rowset->Row as $item ) {printf('<li>%s -- %s -- %s -- %s -- <span style="font-weight:bold">%s</span></li>', $item->Column1, $item->Column2, $item->Column4, $item->Column7, $item->Column6);}/*
+?>
